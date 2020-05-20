@@ -1,0 +1,194 @@
+extends layout
+
+block content
+  //- h1= title
+  //- p Welcome to #{title}
+  //- a(href="users") users
+  <div class="modal fade" id="videoModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Node Js</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <video width="100%" controls>
+            <source src="../videos/demo.mp4" type="video/mp4">
+            //- <source src="../videos/movie.ogg" type="video/ogg">
+            | Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="modal-footer">
+          //- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          //- <button type="button" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  .main.container
+    .row
+      .col
+        p 
+        <div class="alert bg-dark alert-dismissible fade show text-white" role="alert">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    .row
+      .col
+        .card
+          .card-header Node.js
+            .float-right <i class="fab fa-node-js fa-3x"></i>
+            //- img.float-right(src="images/nodejs.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title
+              a(href='https://nodejs.org/en/', target='_blank') https://nodejs.org/en/
+            p.card-text As an asynchronous event-driven JavaScript runtime, Node.js runs single-threaded, non-blocking, asynchronously programming, which is very memory efficient.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <iframe src="https://jsfiddle.net/" style="border:none;"></iframe>
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'Node Js', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+
+      .col
+        .card
+          .card-header Deno
+            //- .float-right <i class="fab fa-typescript fa-3x"></i>
+            img.float-right(src="images/deno.png", alt="Smiley face", height="50", width='50')
+          .card-body
+            h5.card-title
+              a(href='https://deno.land/', target='_blank') https://deno.land/
+            p.card-text Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Secure by default. No file, network, or environment access, unless explicitly enabled.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'Deno', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+
+      .col
+        .card
+          .card-header TypeScript
+            //- .float-right <i class="fab fa-typescript fa-3x"></i>
+            img.float-right(src="images/ts-black-logo.png", alt="Smiley face", height="50", width='50')
+          .card-body
+            h5.card-title
+              a(href='https://www.typescriptlang.org/', target='_blank') https://www.typescriptlang.org/
+            p.card-text TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. You can use this language for application-scale JavaScript development.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'TypeScript', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+
+    .row
+      .col
+        hr
+    //-  h3 JS Libraries and Frameworks
+    p
+    .row
+      .col
+        .card
+          .card-header Angular 
+            .float-right <i class="fab fa-angular fa-3x"></i>
+            //- img.float-right(src="images/angular.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title 
+              a(href='https://angular.io/', target='_blank') https://angular.io/
+            p.card-text AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. AngularJS's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'Angular', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+
+      .col
+        .card
+          .card-header React
+            .float-right <i class="fab fa-react fa-3x"></i>
+            //- img.float-right(src="images/react.png", alt="Smiley face", height="42", width="62")
+          .card-body
+            h5.card-title 
+              a(href='https://reactjs.org/', target='_blank') https://reactjs.org/
+            p.card-text React JS is a JavaScript library used in web development to build interactive elements on websites. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing.Redux and React Router are respective examples of such libraries.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'React', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+      
+      .col
+        .card
+          .card-header Vue
+            .float-right <i class="fab fa-vuejs fa-3x"></i>
+            //- img.float-right(src="images/vue.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title 
+              a(href='https://vuejs.org/', target='_blank') https://vuejs.org/
+            p.card-text Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'Vue', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+    .row
+      .col
+        hr
+    .row
+      .col
+        .card
+          .card-header HTML
+            .float-right <i class="fab fa-html5 fa-3x"></i>
+            //- img.float-right(src="images/html.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title 
+              a(href='https://developer.mozilla.org/en-US/docs/Web/HTML', target='_blank') https://developer.mozilla.org/en-US/docs/Web/HTML
+            p.card-text HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'HTML', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+
+      .col
+        .card
+          .card-header CSS
+            .float-right <i class="fab fa-css3 fa-3x"></i>
+            //- img.float-right(src="images/css-1871071-1584606.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title 
+              a(href='https://developer.mozilla.org/en-US/docs/Web/CSS', target='_blank') https://developer.mozilla.org/en-US/docs/Web/CSS
+            p.card-text Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'CSS', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+      
+      .col
+        .card
+          .card-header JavaScript
+            .float-right <i class="fab fa-js fa-3x"></i>
+            //- img.float-right(src="images/js.png", alt="Smiley face", height="42", width="42")
+          .card-body
+            h5.card-title 
+              a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript', target='_blank') https://developer.mozilla.org/en-US/docs/Web/JavaScript
+            p.card-text JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.
+            a(href='https://jsfiddle.net/', target='_blank')
+              //- <img src="images/code.png" alt="code" height="30", width="42">
+              <i class="fa fa-code fa-2x"></i>
+            a.float-right(href="#", onclick="vModelopener({title: 'JavaScript', desc: 'A little description here...'})")
+              //- <img src="images/video.png" alt="video" width="42">
+              <i class="fa fa-play-circle fa-2x"></i>
+    p

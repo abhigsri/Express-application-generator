@@ -1,0 +1,114 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='icon', href='/images/favicon.png', type='image/png', sizes='16x16')
+    link(href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/stylesheets/scroll.css")
+  body
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">#{title}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse form-inline justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav my-2 my-lg-0">
+        //- <li class="nav-item active">
+        //-   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        //- </li>
+        <li class="nav-item">
+          <a class="nav-link" href="learnings">Learnings</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Videos</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Premium</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled bg-dark btn btn-sm text-white" href="#" tabindex="-1" aria-disabled="true">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  .main.container
+  block content
+  .box.subscribe-form
+    <form>
+      <div class="row">
+        <div class="col">
+          //- <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control form-control-sm" placeholder="Email Address">
+        </div>
+        <div class="col">
+          //- <input type="text" class="form-control" placeholder="First name">
+        </div>
+      </div>
+      p
+      <div class="row">
+        <div class="col">
+          //- <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-block bg-dark text-white">Subscribe</button>
+        </div>
+        <div class="col">
+          //- <input type="text" class="form-control" placeholder="First name">
+        </div>
+      </div>
+    </form>
+  p
+  .box
+      a(href="https://facebook.com/abhigsri", target='_blanck')
+        <i class="fa fa-facebook"></i></a> | 
+      a(href="https://twitter.com/ABHIGSRI", target='_blanck')
+        <i class="fa fa-twitter"></i></a> | 
+      a(href="https://www.linkedin.com/in/abhisheksrivastava-36b23321/", target='_blanck')
+        <i class="fa fa-linkedin"></i></a> | 
+      a(href="https://github.com/abhigsri", target='_blanck')
+        <i class="fa fa-github"></i></a>
+  p
+  .signature &copy; Copyright 2020 @abhigsri
+      
+  .footer
+    .chat
+      <p class="open-button" onclick="openForm()">
+        <i class="fa fa-keyboard fa-3x"></i>
+        //- <img src="images/chat 2.png" alt="chat" width="72">
+        //- <i class="fas fa-comment"></i>
+      </p>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/#" class="form-container">
+          <h3>Happy to help you :)</h3>
+
+          <label for="msg"><b>Will get back to you asap.</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+
+          //- <button type="submit" class="btn">Send</button>
+          .btn.bg-dark.btn-sm.text-white(type='submit', role='button') Send
+          .btn.bg-light.btn-sm.float-right(type='button', role='button', onclick="closeForm()") Close
+          //- <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(type="text/javascript", src="/bootstrap/js/bootstrap.min.js")
+    script(type="text/javascript", src="/bootstrap/js/bootstrap.bundle.min.js")
+    script(type="text/javascript", src="https://platform.linkedin.com/badges/js/profile.js", async, defer)
+    script(type="text/javascript", src="/Airship-Web-SDK/airship.js")
+    script(type="text/javascript", src="/Airship-Web-SDK/airship-registration.js")
+    script(type="text/javascript", src="/js/custom.js")
+    script(src="https://kit.fontawesome.com/4c782ef858.js", crossorigin="anonymous")
+
+    
+
+      
+    
