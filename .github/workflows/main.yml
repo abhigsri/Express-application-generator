@@ -19,7 +19,7 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: bin # The folder the action should deploy.
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+          publish_dir: ./bin
