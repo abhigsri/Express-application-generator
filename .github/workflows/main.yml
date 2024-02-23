@@ -21,4 +21,5 @@ jobs:
       - name: Deploy 🚀
         uses: https://abhigsri.github.io/abhishek/@v4
         with:
-          folder: build # The folder the action should deploy.
+          folder: bin/www.js # The folder the action should deploy.
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
