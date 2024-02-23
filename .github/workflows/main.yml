@@ -1,22 +1,19 @@
-name: Node.js CI
-
+name: Build and Deploy
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+    branches:
+      - main
+permissions:
+  contents: write
 jobs:
-  build:
-
-    runs-on: self-hosted
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16.x
-    - run: npm install
-    - run: npm test
-    - run: pm2 restart uaapp
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Deploy 🚀
+        uses: https://abhigsri.github.io/abhishek@v4
+        with:
+          folder: bin/www.js # The folder the action should deploy.
